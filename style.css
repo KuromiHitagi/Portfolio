@@ -1,0 +1,111 @@
+/* === IMPORTAÇÃO DA FONTE === */
+@font-face {
+    font-family: 'Fancy';
+    src: url('./src/font/SuperMario256.ttf') format('TrueType');
+}
+
+/* === CONFIGURAÇÃO BÁSICA GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.2s;
+}
+
+/* === CLASSE PARA CRESCER OS OBJETOS === */
+.Grow {
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* VARIÁVEIS */
+:root {
+    /* === CORES === */
+    --cor-texto-destaque: #ffff31;
+    --cor-texto-titulo: #fff;
+    --cor-texto-comun: #999999;
+    --cor-texto-lateral: #000;
+    --cor-texto-footer: #ef9d5d;
+
+    --cor-fundo: #051139;
+    --cor-fundo-destaque: #643488;
+    --cor-fundo-cards: #E870A0;
+
+    /* === BORDA === */
+    --border: 1px solid var(--cor-primaria);
+    --border-radius: 10px;
+
+    /* === FONTE === */
+    --fonte-family: 'Fancy';
+    --fonte-size-b: 62px;
+    --fonte-size-m: 24px;
+    --fonte-size-s: 16px;
+}
+
+/* CONFIGURAÇÃO INICIAL DO ESCOPO === */
+html,
+body {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 150px;
+    background-color: #9e55f0;
+
+    /* border: var(--border); */
+
+    .nav-principal{
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        min-height: 150px;
+        padding: 0 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-principal_logo{
+            color: var(--cor-texto-destaque);
+            font-family: var(--fonte-family);
+            font-size: var(--fonte-size-b);
+            text-shadow: 4px 4px 1px #000;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    min-height: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* border: var(--border); */
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+
+    background-color: #91482c;
+    /* border: var(--border); */
+}
