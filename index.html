@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Waluigi</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Rotas</title>
+
+    <style>
+        body{
+            overflow: hidden;
+            background-color: #999999;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            a{
+                text-decoration: none;
+                color: black;
+                transition: all ease 0.4s;
+
+                &:hover{
+                    color: #fff;
+                    transform: scale(1.5);
+                }
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <header>
-        <nav class="nav-principal">
-            <h1 class="nav-principal_logo">WarioWare.Inc</h1>
-
-            <ul class="nav-principal_links">
-                <li><a href="#Inicio">Início</a></li>
-                <li><a href="#Projetos">Projetos</a></li>
-                <li><a href="#Contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
-        <section id="Inicio" class="hero">
+        <a href="./waluigi/index.html">Waluigi</a>
 
-        </section>
-
-        <section id="Projetos" class="projetos">
-
-        </section>
+        <a href="./wario/index.html">Wario</a>
     </main>
-
-    <footer>
-        <p>© 2026 Nicolas Freitas Souza — Todos os direitos reservados</p>
-        <a id="Contato" href="mailto:nicolasfreitassouza076@gmail.com">Contato</a>
-    </footer>
 </body>
-
 </html>
