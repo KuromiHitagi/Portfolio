@@ -1,32 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-        const swiper = new Swiper('.meu-carrossel', {
-            // Configurações opcionais
-            loop: true, // Faz o carrossel voltar ao início infinitamente
+    const swiper = new Swiper('.meu-carrossel', {
+        loop: true,
+        slidesPerView: 3, // Passe como número, sem aspas
+        spaceBetween: -30,
+        centeredSlides: true,
 
-            slidesPerView: 3,
+        // Ativa o autoplay nativo
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
 
-            spaceBetween: 50,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
 
-            centeredSlides: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
+    // --- FUNÇÃO PARA ALTERNAR (TOGGLE) O AUTOPLAY ---
+    let estaRodando = true;
 
-            // Ativa a paginação por pontinhos
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            // Ativa as setas de navegação
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // effect: fade,
-        });
-})
+    function autoplay() {
+        if (estaRodando) {
+            swiper.autoplay.stop(); // Para o carrossel
+            estaRodando = false;
+            console.log('Autoplay Pausado!');
+        } else {
+            swiper.autoplay.start(); // Retoma o carrossel
+            estaRodando = true;
+            console.log('Autoplay Iniciado!');
+        }
+    }
+});
