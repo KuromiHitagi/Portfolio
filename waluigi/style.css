@@ -36,9 +36,11 @@
     --cor-texto-footer: #ef9d5d;
 
     --cor-fundo: #051139;
-    --cor-fundo2:rgb(33, 5, 78);
-    --cor-fundo-destaque: #643488;
+    --cor-fundo2: rgb(33, 5, 78);
+    --cor-fundo-destaque: #351052;
+    --cor-fundo-destaque-full: linear-gradient(to right, var(--cor-fundo-destaque), #5c03a0);
     --cor-fundo-cards: #E870A0;
+    --cor-fundo-cards2: #f1317e;
 
     /* === BORDA === */
     --border: 2px solid var(--cor-texto-destaque);
@@ -108,7 +110,7 @@ header {
             list-style-type: none;
             color: var(--cor-texto-titulo);
 
-            background-color: var(--cor-fundo-destaque);
+            background-color: var(--cor-fundo-destaque-full);
 
             a {
                 font-size: var(--fonte-size-m);
@@ -161,7 +163,7 @@ main {
             width: 1600px;
             height: 350px;
 
-            background-color: var(--cor-fundo-destaque);
+            background: var(--cor-fundo-destaque-full);
             border-radius: var(--border-radius);
 
             .Foto {
@@ -230,7 +232,7 @@ main {
     .projetos {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
 
         .Titulo {
             font-size: var(--fonte-size-m);
@@ -243,8 +245,8 @@ main {
 
             position: relative;
             width: 100%;
-            height: 300px;
-            margin-bottom: 5%;
+            height: 350px;
+            /* margin-bottom: 10%; */
 
             .swiper-wrapper {
                 display: flex;
@@ -262,7 +264,7 @@ main {
                         padding: 15px;
 
                         border-radius: var(--border-radius);
-                        background-color: var(--cor-fundo-cards);
+                        background: linear-gradient(to right, var(--cor-fundo-cards), var(--cor-fundo-cards2));
                         color: var(--cor-texto-lateral);
 
                         text-align: center;
@@ -280,9 +282,14 @@ main {
                             text-align: justify;
                             text-shadow: 1px 1px 3px var(--cor-texto-titulo);
 
-                            b{
+                            b {
                                 text-shadow: 1px 1px 3px var(--cor-texto-titulo);
                             }
+                        }
+
+                        &:hover {
+                            transform: scale(1.07);
+                            box-shadow: 5px 5px 10px 0px var(--cor-texto-lateral);
                         }
                     }
                 }
@@ -304,9 +311,13 @@ main {
                             font-size: var(--fonte-size-m);
                             text-shadow: 1px 1px 5px var(--cor-texto-lateral);
 
-                            b{
+                            b {
                                 text-shadow: 2px 1px 5px var(--cor-texto-lateral);
                             }
+                        }
+
+                        &:hover {
+                            box-shadow: 5px 5px 10px 0px var(--cor-texto-titulo);
                         }
                     }
                 }
@@ -343,6 +354,68 @@ main {
                 }
             }
         }
+    }
+
+    .Custo_de_Contrato {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .Titulo {
+            font-size: var(--fonte-size-m);
+            color: var(--cor-texto-comum);
+        }
+
+        .Tabela-Div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 1315px;
+            height: 315px;
+
+            background: var(--cor-fundo-destaque-full);
+            border-radius: var(--border-radius);
+
+            .Tabela {
+                width: 80%;
+                border-collapse: collapse;
+                text-align: center;
+
+                .Titulos {
+                    font-size: var(--fonte-size-b);
+                    color: var(--cor-texto-titulo);
+
+                    th {
+                        border: 1px solid var(--cor-texto-comum);
+                    }
+                }
+
+                .Textos {
+                    font-size: var(--fonte-size-m);
+                    color: var(--cor-texto-comum);
+
+                    td {
+                        min-width: 250px;
+                        border: 1px solid var(--cor-texto-comum);
+                        padding: 10px;
+                        text-align: justify;
+                    }
+
+                    .td_meio{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .Reconhecimento{
+
+    }
+
+    .Termos{
+        
     }
 }
 

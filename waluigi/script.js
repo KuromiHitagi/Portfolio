@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FUNÇÃO PARA ALTERNAR (TOGGLE) O AUTOPLAY ---
     let estaRodando = true;
-
-    function autoplay() {
+    const autoButton = document.getElementById("auto-button")
+    autoButton.onclick = (() => {
         if (estaRodando) {
             swiper.autoplay.stop(); // Para o carrossel
             estaRodando = false;
@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
             estaRodando = true;
             console.log('Autoplay Iniciado!');
         }
-    }
+    })
 });
