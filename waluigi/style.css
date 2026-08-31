@@ -153,7 +153,7 @@ main {
     .hero {
         margin: 5% 0;
 
-        .Container {
+        .Conteudo {
             position: relative;
 
             display: flex;
@@ -210,7 +210,7 @@ main {
                     }
                 }
 
-                .Conteudo {
+                .Sobre {
                     margin-top: 2%;
 
                     font-size: var(--fonte-size-m);
@@ -366,7 +366,7 @@ main {
             color: var(--cor-texto-comum);
         }
 
-        .Tabela-Div {
+        .Conteudo {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -381,6 +381,7 @@ main {
                 width: 80%;
                 border-collapse: collapse;
                 text-align: center;
+                text-shadow: 2px 2px 6px var(--cor-texto-lateral);
 
                 .Titulos {
                     font-size: var(--fonte-size-b);
@@ -402,7 +403,7 @@ main {
                         text-align: justify;
                     }
 
-                    .td_meio{
+                    .td_meio {
                         text-align: center;
                     }
                 }
@@ -410,12 +411,144 @@ main {
         }
     }
 
-    .Reconhecimento{
+    .Reconhecimento {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
+        .Titulo {
+            font-size: var(--fonte-size-m);
+            color: var(--cor-texto-comum);
+            text-align: center;
+        }
+
+        .Conteudo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 1505px;
+            height: 315px;
+
+            background: var(--cor-fundo-destaque-full);
+            border-radius: var(--border-radius);
+
+            ul {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 30px;
+
+                width: 100%;
+                height: 315px;
+                padding: 0 15px;
+
+                list-style-type: none;
+                text-shadow: 2px 2px 4px var(--cor-texto-lateral);
+                color: var(--cor-texto-comum);
+                font-size: var(--fonte-size-m);
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    width: 340px;
+                    height: 75%;
+                    text-align: justify;
+                    line-height: 35px;
+
+                    background: linear-gradient(to right, #00000041, #0000002f);
+                    border-radius: var(--border-radius);
+
+                    .title {
+                        position: absolute;
+                        top: 45px;
+                        text-shadow: 1px 1px 10px var(--cor-texto-titulo);
+                        text-align: center;
+                        color: var(--cor-texto-destaque);
+
+                        width: 315px;
+
+                        &::before {
+                            content: "\2606";
+                        }
+                    }
+
+                    .text {
+                        position: absolute;
+                        top: 85px;
+
+                        width: 325px;
+                    }
+                }
+            }
+        }
     }
 
-    .Termos{
-        
+    .Termos {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .Titulo {
+            font-size: var(--fonte-size-m);
+            color: var(--cor-texto-comum);
+            text-align: center;
+        }
+
+        .Conteudo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 1505px;
+            height: 315px;
+
+            background: var(--cor-fundo-destaque-full);
+            border-radius: var(--border-radius);
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 20px;
+
+                width: 100%;
+                height: 315px;
+                padding: 15px 0;
+
+                list-style-type: none;
+                text-shadow: 2px 2px 4px var(--cor-texto-lateral);
+                color: var(--cor-texto-comum);
+                font-size: var(--fonte-size-m);
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    width: 90%;
+                    height: 75%;
+                    padding: 0 25px;
+
+                    background: linear-gradient(to right, #00000041, #0000002f);
+                    border-radius: var(--border-radius);
+
+                    .title {
+                        text-shadow: 1px 1px 5px var(--cor-texto-titulo);
+                        color: var(--cor-texto-destaque);
+
+                        &::before {
+                            content: "\2605";
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
