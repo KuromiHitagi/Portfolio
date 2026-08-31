@@ -1,0 +1,37 @@
+[
+    {
+        "h1": "Phishing Verde-Esmagado",
+        "p1": "Campanha massiva de e-mails falsos direcionada a Luigi para sequestrar sua conta de nuvem, vazar e-mails e deletar backups.",
+        "p2": "Clona portais do ToadCloud e envia spear-phishing para exfiltrar mensagens privadas e formatar servidores do Reino sem deixar rastros."
+    },
+    {
+        "h1": "Waluigi Wi-Fi Jammer",
+        "p1": "Dispositivo de bloqueio de sinal para interromper a comunicação em eventos e torneios do Reino dos Cogumelos",
+        "p2": "Transmissores em karts emitem ruído em 2.4 e 5 GHz, derrubando a Mushroom TV e impedindo a comunicação da segurança."
+    },
+    {
+        "h1": "Eggplant Spyware",
+        "p1": "Malware disfarçado de app de esportes para rastrear geolocalização VIP e interceptar chamadas telefônicas em tempo real.",
+        "p2": "Disfarçado de contador de passos, obtém acesso root para gravar áudio ambiente e enviar o GPS do alvo ao servidor da WarioWare."
+    },
+    {
+        "h1": "Moustache MiTM",
+        "p1": "Router rogue e portal cativo implantado em cafés e áreas VIP para interceptar credenciais e sessões de dados dos alvos.",
+        "p2": "Disfarçado de Wi-Fi público, usa ARP Spoofing e SSL Stripping para capturar cookies de sessão e senhas em texto puro."
+    },
+    {
+        "h1": "Purple-Screen Ransomware",
+        "p1": "Ransomware focado em extorsão que criptografa bancos de dados e exibe uma tela roxa com a risada do Waluigi.",
+        "p2": "Trava os registros de moedas da tesouraria real com AES-256, exigindo resgate em WarioCoins para liberar os arquivos."
+    },
+    {
+        "h1": "Tennis-Ball Botnet",
+        "p1": "Rede de dispositivos IoT infectados pronta para disparar ataques DDoS contra a infraestrutura do Reino em dias de jogos.",
+        "p2": "Infecta câmeras e smart TVs por senhas padrão, gerando ataques de SYN Flood para derrubar bilheterias e streams."
+    },
+    {
+        "h1": "Daisy-Chain Keylogger",
+        "p1": "Hardware USB compacto inserido discretamente entre o teclado e o computador da máquina de encanamento do Mario.",
+        "p2": "Captura pressionamentos de teclas e senhas digitadas no terminal, transmitindo os logs sem fio diretamente para o Waluigi."
+    }
+]

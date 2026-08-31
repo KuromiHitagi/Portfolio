@@ -1,27 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.meu-carrossel', {
-        loop: true,
-        slidesPerView: 3, // Passe como número, sem aspas
-        spaceBetween: -30,
-        centeredSlides: true,
+    let swiper;
+    function loadData() {
+        const wrapper = document.getElementById('wrapper')
 
-        // Ativa o autoplay nativo
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
+        fetch('./Conteudo.json')
+            .then(response => response.json())
+            .then(json => {
+                json.forEach(e => {
+                    wrapper.innerHTML += `
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h1>Projeto <br> ${e.h1}</h1>
+                            <p><b>Resumo:</b> ${e.p1}
+                                <br>
+                                <b>Detalhamento:</b> ${e.p2}
+                            </p>
+                        </div>
+                    </div>
+                `
+                });
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+                swiper = new Swiper('.meu-carrossel', {
+                    loop: true,
+                    slidesPerView: 3, // Passe como número, sem aspas
+                    spaceBetween: -30,
+                    centeredSlides: true,
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+                    // Ativa o autoplay nativo
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            })
+            .catch(error => console.error("Deu merda: ", error))
+    }
+
+    loadData();
 
     // --- FUNÇÃO PARA ALTERNAR (TOGGLE) O AUTOPLAY ---
     let estaRodando = true;
