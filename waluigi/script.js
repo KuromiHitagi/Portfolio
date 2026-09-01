@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrapper.innerHTML += `
                     <div class="swiper-slide">
                         <div class="card">
-                            <h1>Projeto <br> ${e.h1}</h1>
-                            <p><b>Resumo:</b> ${e.p1}
-                                <br>
+                            <h1 class="Grow-Text">Projeto <br> ${e.h1}</h1>
+                            <p >
+                                <b>Resumo:</b> ${e.p1} <br>
                                 <b>Detalhamento:</b> ${e.p2}
                             </p>
                         </div>
