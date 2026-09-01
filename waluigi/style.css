@@ -550,7 +550,7 @@ main {
                 li {
                     display: flex;
                     align-items: center;
-                    justify-content: start;
+                    justify-content: center;
                     text-align: center;
 
                     width: 90%;
@@ -580,6 +580,10 @@ main {
                             left: 0;
                             content: "\2605";
                         }
+
+                        &:hover{
+                            transform: translateX(-35px);
+                        }
                     }
 
                     .text {
@@ -591,6 +595,10 @@ main {
                         margin-top: 5px;
                         letter-spacing: 2px;
                         height: 37px;
+
+                        &:hover{
+                            transform: translateX(35px);
+                        }
                     }
                 }
             }
@@ -606,6 +614,11 @@ footer {
     height: 300px;
 
     background-color: #91482c;
+
+    a:hover{
+        transform: scale(1.1);
+        text-decoration: underline !important;
+    }
     
     .Links{
         display: flex;
