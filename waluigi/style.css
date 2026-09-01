@@ -110,7 +110,7 @@ header {
             list-style-type: none;
             color: var(--cor-texto-titulo);
 
-            background-color: var(--cor-fundo-destaque-full);
+            background-color: var(--cor-fundo-destaque);
 
             a {
                 font-size: var(--fonte-size-m);
@@ -140,6 +140,15 @@ main {
 
         width: 100%;
         min-height: 700px;
+        
+        .Titulo {
+            font-size: var(--fonte-size-m);
+            font-family: var(--fonte-family);
+            color: var(--cor-texto-titulo);
+            text-shadow: 2px 2px 5px #b9b945;
+            letter-spacing: 2px;
+            text-align: center;
+        }
     }
 
     .Separacao {
@@ -197,7 +206,7 @@ main {
                 width: 850px;
                 height: 90%;
 
-                .Titulo {
+                .title {
                     font-size: var(--fonte-size-m);
                     text-align: center;
 
@@ -233,11 +242,6 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
-        .Titulo {
-            font-size: var(--fonte-size-m);
-            color: var(--cor-texto-titulo);
-        }
 
         .swiper {
             display: flex;
@@ -361,11 +365,6 @@ main {
         align-items: center;
         justify-content: space-evenly;
 
-        .Titulo {
-            font-size: var(--fonte-size-m);
-            color: var(--cor-texto-comum);
-        }
-
         .Conteudo {
             display: flex;
             align-items: center;
@@ -415,13 +414,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
-        .Titulo {
-            font-size: var(--fonte-size-m);
-            color: var(--cor-texto-comum);
-            text-align: center;
-        }
-
+       
         .Conteudo {
             display: flex;
             align-items: center;
@@ -493,12 +486,6 @@ main {
         align-items: center;
         justify-content: space-evenly;
 
-        .Titulo {
-            font-size: var(--fonte-size-m);
-            color: var(--cor-texto-comum);
-            text-align: center;
-        }
-
         .Conteudo {
             display: flex;
             align-items: center;
@@ -530,21 +517,46 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: start;
+                    text-align: center;
 
                     width: 90%;
-                    height: 75%;
+                    height: 30%;
                     padding: 0 25px;
 
                     background: linear-gradient(to right, #00000041, #0000002f);
                     border-radius: var(--border-radius);
 
                     .title {
+                        position: relative;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        height: auto;
+
+                        padding-left: 35px;
                         text-shadow: 1px 1px 5px var(--cor-texto-titulo);
                         color: var(--cor-texto-destaque);
+                        font-size: var(--fonte-size-b);
 
                         &::before {
+                            position: absolute;
+                            top: -15%;
+                            left: 0;
                             content: "\2605";
                         }
+                    }
+
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        margin-left: 5px;
+                        margin-top: 5px;
+                        letter-spacing: 2px;
+                        height: 37px;
                     }
                 }
             }
@@ -555,10 +567,22 @@ main {
 footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     min-height: 300px;
 
     background-color: #91482c;
-    /* border: var(--border); */
+    
+    .Links{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
 }
