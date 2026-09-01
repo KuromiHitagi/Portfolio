@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Waluigi</title>
+
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -14,64 +16,203 @@
         <nav class="nav-principal">
             <h1 class="nav-principal_logo">WarioWare.Inc</h1>
 
-            <ul class="nav-principal_links">
-                <li><a href="#Inicio">Início</a></li>
-                <li><a href="#Projetos">Projetos</a></li>
-                <li><a href="#Contato">Contato</a></li>
+            <ul class="nav-principal_links Grow">
+                <li class="Grow-Text"><a href="#Inicio">Início</a></li>
+                <li class="Grow-Text"><a href="#Projetos">Projetos</a></li>
+                <li class="Grow-Text"><a href="#Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="Inicio" class="hero">
+            <div class="Conteudo">
+                <div class="Foto Usuario">
+                    <img src="../src/image/persona/waluigi-formal.jpg" alt="Waluigi">
+                </div>
 
+                <article class="Apresentacao">
+                    <div class="title">
+                        <h1>Wario Wario</h1>
+                        <div class="desc">
+                            <div>Founder,</div>
+                            <div>Lead Hacker</div> 
+                            <div>Master cyber-pirate</div> 
+                            <div>CEO WarioWare Inc.</div>
+                        </div>
+                    </div>
+
+                    <div class="Sobre">
+                        <h2>Sobre o Especialista</h2>
+                        <p>
+                            Especialista autodidata em extração não autorizada de liquidez e arquiteto de malwares avançados. Com mais de duas décadas dominando o submundo digital de Diamond City, transformo sistemas de alta segurança em fontes diretas de renda em ouro e criptomoedas. Se o dinheiro está no servidor de alguém, eu coloco no meu bolso.
+                        </p>
+                    </div>
+                </article>
+
+                <div class="Foto Empresa">
+                    <img src="../src/image/persona/Diamond-City-Bandits.jpg" alt="Empresa">
+                </div>
+            </div>
         </section>
 
+        <div class="Separacao"></div>
+
         <section id="Projetos" class="projetos">
-
-            <div class = "car" id = "car1">
-
-                <a>
-                    
-                    GarlicCoin 2.0 & DeFi Hijack (Em Andamento)Desenvolvimento
-                    de um protocolo malicioso para drenagem automatizada de 
-                    pools de liquidez em corretoras descentralizadas da Web3.
-
-                </a>
-
+            <div class="Titulo">
+                <h1>Projetos</h1>
             </div>
 
-            <div class = "car" id = "car2">
+            <button id="auto-button" class="autoplayButton" onclick="autoplay()">Autoplay</button>
+            <!-- Estrutura Principal do Carrossel -->
+            <div class="swiper meu-carrossel">
+                <!-- Slides -->
+                <div id="wrapper" class="swiper-wrapper">
+                    <!-- Será renderizado via JS, para não poluir o HTML -->
+                </div>
 
-                <a>
-                    
-                    GarlicCoin 2.0 & DeFi Hijack (Em Andamento)Desenvolvimento
-                    de um protocolo malicioso para drenagem automatizada de 
-                    pools de liquidez em corretoras descentralizadas da Web3.
+                <!-- Botões de Navegação (Setas) -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
 
-                </a>
+        <div class="Separacao"></div>
 
+        <section id="Custo_de_Contrato" class="Custo_de_Contrato">
+            <div class="Titulo">
+                <h1>Custo de Contrato</h1>
             </div>
 
-            <div class = "car" id = "car3">
+            <div class="Conteudo">
+                <table class="Tabela">
+                    <thead class="Titulos">
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Detalhes / Requisitos</th>
+                        </tr>
+                    </thead>
 
-                <a>
-                    
-                    GarlicCoin 2.0 & DeFi Hijack (Em Andamento)Desenvolvimento
-                    de um protocolo malicioso para drenagem automatizada de 
-                    pools de liquidez em corretoras descentralizadas da Web3.
+                    <tbody class="Textos">
+                        <tr>
+                            <td class="td_meio">Custo Mínimo</td>
+                            <td>100.000 moedas de ouro (desconto de 20% se o alvo for o Mario). Aceito pagamento em
+                                Bitcoin ou GalicCoin.</td>
+                        </tr>
+                        <tr>
+                            <td class="td_meio">O que Esperar</td>
+                            <td>Ganância desenfreada, execuções ágeis, zero ética, proteção total contra outros 
+                                hackers e destruição completa da infraestrutura do seu rival.</td>
+                        </tr>
+                        <tr>
+                            <td class="td_meio">O que NÃO Esperar</td>
+                            <td>Descontos, devolução de troco, empatia com as vítimas ou reuniões presenciais sem um 
+                                banquete de alho incluído.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-                </a>
+        <div class="Separacao"></div>
 
+        <section class="Reconhecimento">
+            <div class="Titulo">
+                <h1>Reconhecimento do Mercado <br> (Ultimatos E Rivais)</h1>
             </div>
 
+            <div class="Conteudo">
+                <ul>
+                    <li>
+                        <div class="title"><b> Tribunal dos Cogumelos:</b></div> <br>
+                        <div class="text">Foragido nº 1 (Pena de 150 anos por invasão e liquidação total de ativos reais).</div>
+                    </li>
+                    <li>
+                        <div class="title"><b> Corte de Diamond City:</b></div> <br>
+                        <div class="text">Ameaça de Nível Crítico (Distribuição de ransomware e sonegação cripto).</div>
+                    </li>
+                    <li>
+                        <div class="title"><b>Mario & Luigi:</b></div> <br>
+                        <div class="text">Inimigos declarados (Alvos constantes de ataques DDoS e phishing).</div>
+                    </li>
+                    <li>
+                        <div class="title"><b>Waluigi</b></div> <br>
+                        <div class="text">Parceria Tática / Rivalidade Instável (Coautor de fraudes e concorrente direto por saques).</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="Separacao"></div>
+
+        <section class="Termos">
+            <div class="Titulo">
+                <h1>Termos de Serviço</h1>
+            </div>
+
+            <div class="Conteudo">
+                <ul>
+                    <li>
+                        <div class="title"><b> Pagamento:</b></div>
+                        <div class="text"> 100% de adiantamento em ativos não rastreáveis antes do primeiro clique.</div>
+                    </li>
+                    <li>
+                        <div class="title"><b> Logística:</b></div>
+                        <div class="text"> Suprimento ilimitado de alho fresco no ambiente de trabalho durante a operação.</div>
+                    </li>
+                    <li>
+                        <div class="title"><b> Isenção de Responsabilidade:</b></div>
+                        <div class="text"> Reembolso inexistente. Se a polícia aparecer, a culpa é totalmente sua.</div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Wario Wario — Todos os direitos reservados</p>
-        <a id="Contato" href="mailto:@gmail.com">Contato</a>
+        <div class="Links">
+
+            <div class="card">
+                <img src="../src/image/links/github.png" alt="githubImg">
+                <a href="https://github.com/darkye07/" target="_blank">Github</a>
+
+                <div class="background-white"></div>
+            </div>
+
+            <div class="card">
+                <img src="../src/image/links/linkedin.png" alt="linkedinImg">
+                <a href="https://www.linkedin.com/in/nicolasBRfreitas/" target="_blank">LinkedIn</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <a id="Contato" href="mailto:nicolasfreitassouza076@gmail.com">
+                <b>Contato:</b> waluigi@diamondcity-hackers.com | <br>
+                <b>Status:</b> IP Mascarado em Servidor Fantasma
+            </a>
+
+            <p>© 2026 Waluigi Wario — Todos os direitos reservados</p>
+        </div>
+
+        <div class="Links">
+
+            <div class="card">
+                <img src="../src/image/links/instagram.png" alt="instagramImg">
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </div>
+
+            <div class="card">
+                <img src="../src/image/links/discord.png" alt="discordImg">
+                <a href="https://discord.com/" target="_blank">Discord</a>
+
+                <div class="background-white"></div>
+            </div>
+
+        </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
 </html>
