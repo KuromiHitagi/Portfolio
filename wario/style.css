@@ -34,14 +34,14 @@
     --cor-texto-titulo: #fff;
     --cor-texto-comum: #eeeeee;
     --cor-texto-lateral: #000;
-    --cor-texto-footer: #ef9d5d;
+    --cor-texto-footer: #178702;
 
-    --cor-fundo: #051139;
-    --cor-fundo2: rgb(33, 5, 78);
-    --cor-fundo-destaque: #351052;
-    --cor-fundo-destaque-full: linear-gradient(to right, var(--cor-fundo-destaque), #5c03a0);
-    --cor-fundo-cards: #E870A0;
-    --cor-fundo-cards2: #f1317e;
+    --cor-fundo: #FDD50B;
+    --cor-fundo2: #c0a311;
+    --cor-fundo-destaque: #9C23FB;
+    --cor-fundo-destaque-full: #845630;
+    --cor-fundo-cards: #CAC02D;
+    --cor-fundo-cards2: #969040;
 
     /* === BORDA === */
     --border: 2px solid var(--cor-texto-destaque);
@@ -64,7 +64,7 @@ body {
     width: 100vw;
     min-height: 100vh;
 
-    background: linear-gradient(to right, var(--cor-fundo), var(--cor-fundo2));
+    background: var(--cor-fundo);
     overflow-x: hidden;
 }
 
@@ -74,7 +74,7 @@ header {
     justify-content: center;
 
     min-height: 150px;
-    background: linear-gradient(to right, var(--cor-fundo2), #9e55f0);
+    background: var(--cor-fundo2);
 
     /* border: var(--border); */
 
@@ -237,6 +237,7 @@ main {
         }
     }
 
+    
     .projetos {
         position: relative;
         display: flex;
@@ -268,7 +269,7 @@ main {
                         padding: 15px;
 
                         border-radius: var(--border-radius);
-                        background: linear-gradient(to right, var(--cor-fundo-cards), var(--cor-fundo-cards2));
+                        background: var(--cor-fundo-cards);
                         color: var(--cor-texto-lateral);
 
                         text-align: center;
@@ -367,7 +368,7 @@ main {
             padding: 10px 20px;
             border: none;
             border-radius: var(--border-radius);
-            background-color: #5078a0;
+            background-color: #5078A0;
 
             color: var(--cor-texto-destaque);
             font-size: var(--fonte-size-m);

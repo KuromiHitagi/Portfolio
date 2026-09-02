@@ -22,9 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 swiper = new Swiper('.meu-carrossel', {
                     loop: true,
-                    slidesPerView: 3, // Passe como número, sem aspas
+                    slidesPerView: 1,
                     spaceBetween: -30,
                     centeredSlides: true,
+                    breakpoints: {
+                        720: {
+                            slidesPerView: 1,
+                        },
+
+                        1800: {
+                            slidesPerView: 3,
+                        }
+                    },
 
                     // Ativa o autoplay nativo
                     autoplay: {
@@ -55,11 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
     autoButton.onclick = (() => {
         if (estaRodando) {
             swiper.autoplay.stop(); // Para o carrossel
+            autoButton.classList.add("paused");
+            autoButton.textContent = 'Autoplay: Off'
             estaRodando = false;
             console.log('Autoplay Pausado!');
         } else {
             swiper.autoplay.start(); // Retoma o carrossel
+            autoButton.classList.remove("paused");
             estaRodando = true;
+            autoButton.textContent = 'Autoplay: On'
             console.log('Autoplay Iniciado!');
         }
     })
