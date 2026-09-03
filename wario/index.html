@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" type="image/png" href="../src/image/persona/favicon-wario.png">
+
+    <script>
+        if (localStorage.getItem('wah') === 'true') {
+            // Garante que o body existe antes de mudar o HTML
+            document.addEventListener("DOMContentLoaded", () => {
+                alert("VOCÊ AINDA DEVE PAGAR SEU INÚTIL")
+                alert("NÃO ADIANTA TENTAR FUGIR")
+                bloquearTela();
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -29,24 +40,27 @@
         <section id="Inicio" class="hero">
             <div class="Conteudo">
                 <div class="Foto Usuario">
-                    <img src="../src/image/persona/wario-formal.jpg" alt="Wario">
+                    <img src="../src/image/persona/wario/wario-formal.png" alt="Wario">
                 </div>
 
                 <article class="Apresentacao">
                     <div class="title">
                         <h1>Wario Wario</h1>
                         <div class="desc">
-                            <div>Founder,</div>
-                            <div>Lead Hacker</div> 
-                            <div>Master cyber-pirate</div> 
-                            <div>CEO WarioWare Inc.</div>
+                            <div>Founder. More important than CoFounder</div>
+                            <div>Lead Hacker</div>
+                            <div>Master cyber-pirate</div>
+                            <div>CEO WarioWare Inc. More important than CoCEO</div>
                         </div>
                     </div>
 
                     <div class="Sobre">
                         <h2>Sobre o Especialista</h2>
                         <p>
-                            Especialista autodidata em extração não autorizada de liquidez e arquiteto de malwares avançados. Com mais de duas décadas dominando o submundo digital de Diamond City, transformo sistemas de alta segurança em fontes diretas de renda em ouro e criptomoedas. Se o dinheiro está no servidor de alguém, eu coloco no meu bolso.
+                            Especialista autodidata em extração não autorizada de liquidez e arquiteto de malwares
+                            avançados. Com mais de duas décadas dominando o submundo digital de Diamond City, transformo
+                            sistemas de alta segurança em fontes diretas de renda em ouro e criptomoedas. Se o dinheiro
+                            está no servidor de alguém, eu coloco no meu bolso.
                         </p>
                     </div>
                 </article>
@@ -64,17 +78,17 @@
                 <h1>Projetos</h1>
             </div>
 
-                <button id="auto-button" class="autoplayButton" onclick="autoplay()">Autoplay</button>
-                <!-- Estrutura Principal do Carrossel -->
-                <div class="swiper meu-carrossel">
-                    <!-- Slides -->
-                    <div id="wrapper" class="swiper-wrapper">
-                        <!-- Será renderizado via JS, para não poluir o HTML -->
-                    </div>
+            <button id="auto-button" class="autoplayButton" onclick="autoplay()">Autoplay</button>
+            <!-- Estrutura Principal do Carrossel -->
+            <div class="swiper meu-carrossel">
+                <!-- Slides -->
+                <div id="wrapper" class="swiper-wrapper">
+                    <!-- Será renderizado via JS, para não poluir o HTML -->
+                </div>
 
-                    <!-- Botões de Navegação (Setas) -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                <!-- Botões de Navegação (Setas) -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
             </div>
         </section>
@@ -103,12 +117,12 @@
                         </tr>
                         <tr>
                             <td class="td_meio">O que Esperar</td>
-                            <td>Ganância desenfreada, execuções ágeis, zero ética, proteção total contra outros 
+                            <td>Ganância desenfreada, execuções ágeis, zero ética, proteção total contra outros
                                 hackers e destruição completa da infraestrutura do seu rival.</td>
                         </tr>
                         <tr>
                             <td class="td_meio">O que NÃO Esperar</td>
-                            <td>Descontos, devolução de troco, empatia com as vítimas ou reuniões presenciais sem um 
+                            <td>Descontos, devolução de troco, empatia com as vítimas ou reuniões presenciais sem um
                                 banquete de alho incluído.</td>
                         </tr>
                     </tbody>
@@ -127,7 +141,8 @@
                 <ul>
                     <li>
                         <div class="title"><b> Tribunal dos Cogumelos:</b></div> <br>
-                        <div class="text">Foragido nº 1 (Pena de 150 anos por invasão e liquidação total de ativos reais).</div>
+                        <div class="text">Foragido nº 1 (Pena de 150 anos por invasão e liquidação total de ativos
+                            reais).</div>
                     </li>
                     <li>
                         <div class="title"><b> Corte de Diamond City:</b></div> <br>
@@ -139,7 +154,8 @@
                     </li>
                     <li>
                         <div class="title"><b>Waluigi</b></div> <br>
-                        <div class="text">Parceria Tática / Rivalidade Instável (Coautor de fraudes e concorrente direto por saques).</div>
+                        <div class="text">Parceria Tática / Rivalidade Instável (Coautor de fraudes e concorrente direto
+                            por saques).</div>
                     </li>
                 </ul>
             </div>
@@ -156,15 +172,22 @@
                 <ul>
                     <li>
                         <div class="title"><b> Pagamento:</b></div>
-                        <div class="text"> 100% de adiantamento em ativos não rastreáveis antes do primeiro clique.</div>
+                        <div class="text"> 100% de adiantamento em ativos não rastreáveis antes do primeiro clique.
+                        </div>
                     </li>
                     <li>
                         <div class="title"><b> Logística:</b></div>
-                        <div class="text"> Suprimento ilimitado de alho fresco no ambiente de trabalho durante a operação.</div>
+                        <div class="text">
+                            Suprimento ilimitado de alho fresco no ambiente de trabalho durante a operação.
+                            Digite <input type="text" class="Digite_WAH Grow-Text" id="wah_input" placeholder="Alho"
+                                onkeyup="wah(event)"> para 50% de desconto.
+                        </div>
+
                     </li>
                     <li>
                         <div class="title"><b> Isenção de Responsabilidade:</b></div>
-                        <div class="text"> Reembolso inexistente. Se a polícia aparecer, a culpa é totalmente do Waluigi.</div>
+                        <div class="text"> Reembolso inexistente. Se a polícia aparecer, a culpa é totalmente do
+                            Waluigi.</div>
                     </li>
                 </ul>
             </div>
@@ -189,12 +212,14 @@
         </div>
 
         <div class="copyright">
-            <a id="Contato" href="mailto:miguelramosantos200011@gmail.com">
+            <a id="Contato" href="mailto:miguelramosantos200011-stack@gmail.com">
                 <b>Contato:</b> wario@diamondcity-hackers.com | <br>
                 <b>Status:</b> IP Mascarado em Servidor Fantasma
             </a>
 
-            <p>© 2026 Waluigi Wario — Todos os direitos reservados</p>
+            <a href="../waluigi/index.html">Maldito irmão raquítico</a>
+
+            <p>© 2026 Wario Wario — Todos os direitos reservados</p>
         </div>
 
         <div class="Links">
@@ -216,5 +241,135 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
+<script>
+    function wah(event) {
+        let input = event.target;
+
+        if (event.key === "Enter") {
+            if (input.value === "ALHO" || input.value === "alho") {
+                alert("PARABÉNS, POR TER DIGITADO 'ALHO' VOCÊ AGORA SERÁ HACKEADO E TODOS OS SEUS DADOS SERÃO APRISIONADOS");
+                alert("WAH!");
+
+                popUps(2);
+            } else {
+                alert("Seu inútil imprestável que nem sabe digitar uma palavra simples!");
+                alert("TINHA QUE SER O INÚTIL DO WALUIGI!!");
+
+                popUps(20);
+            }
+        }
+    }
+
+    function popUps(time) {
+        let intervaloPopUp;
+        const body = document.body;
+        let elementosCriados = [];
+
+        const gifs = ["25555992", "2384045729115846243", "3952199103414439118", "15141752", "11722509", "10581868021019503288"];
+
+        intervaloPopUp = setInterval(() => {
+            let gifEscolhido = gifs[Math.floor(Math.random() * gifs.length)];
+
+            // Pega a posição atual da tela e o tamanho da janela visível
+            let larguraJanela = window.innerWidth;
+            let alturaJanela = window.innerHeight;
+            let scrollX = window.scrollX;
+            let scrollY = window.scrollY;
+
+            // Sorteia a posição garantindo que fique na tela visível do usuário
+            let topo = scrollY + Math.floor(Math.random() * (alturaJanela - 220));
+            let esquerda = scrollX + Math.floor(Math.random() * (larguraJanela - 320));
+
+            // 1. Cria uma DIV Wrapper (pai) para blindar a posição contra o script do Tenor
+            let wrapper = document.createElement("div");
+            wrapper.style.position = "absolute";
+            wrapper.style.top = `${topo}px`;
+            wrapper.style.left = `${esquerda}px`;
+            wrapper.style.zIndex = "99999";
+            wrapper.style.pointerEvents = "none"; // Evita interferir nos cliques
+
+            // 2. Cria o container do GIF do Tenor dentro da wrapper
+            let container = document.createElement("div");
+            container.className = "tenor-gif-embed";
+            container.setAttribute("data-postid", gifEscolhido);
+            container.setAttribute("data-share-method", "host");
+            container.setAttribute("data-width", "300px");
+            container.style.border = "1px solid var(--cor-texto-destaque)";
+            container.style.boxShadow = "2px 2px 5px 10px var(--cor-texto-destaque)"
+
+            wrapper.appendChild(container);
+
+            // 3. Cria a tag script do Tenor
+            let scriptTenor = document.createElement("script");
+            scriptTenor.src = "https://tenor.com/embed.js";
+            scriptTenor.type = "text/javascript";
+            scriptTenor.async = true;
+
+            wrapper.appendChild(scriptTenor);
+
+            // Adiciona o wrapper inteiro no body
+            body.appendChild(wrapper);
+
+            // Salva a referência do wrapper principal para remoção limpa depois
+            elementosCriados.push(wrapper);
+
+        }, 300);
+
+        setTimeout(() => {
+            clearInterval(intervaloPopUp);
+
+            // Remove todos os wrappers e seus conteúdos da tela de uma vez
+            elementosCriados.forEach(wrapper => {
+                if (wrapper && wrapper.parentNode) {
+                    wrapper.parentNode.removeChild(wrapper);
+                }
+            });
+
+            alert("WAH! TODOS OS DADOS FORAM ROUBADOS");
+
+            bloquearTela()
+        }, time * 1000);
+    }
+
+    function bloquearTela() {
+        const body = document.body;
+        body.style.backgroundColor = '#fff';
+
+        body.innerHTML = `
+        <form style='z-index: 1; position: absolute; top: 50%; left: 40%;' id='form'>
+            <input style='width: 300px;' id="moedas" type='text' placeholder='Pague com moedas criptografadas: '></input>
+            <button type='submit'>WAH</button>    
+        </form>
+
+        <div>
+            <img src='../src/image/persona/wario/background-wario2.jpg' width='24%' height='940px'/>
+            <img src='../src/image/persona/wario/background-wario1.jpg' width='51%' height='940px'/>
+            <img src='../src/image/persona/wario/background-wario3.jpg' width='24%' height='940px'/>
+        </div>
+    `;
+
+        // Ativa a verificação do envio
+        verify();
+    }
+
+    function verify() {
+        let form = document.getElementById("form")
+        localStorage.setItem('wah', 'true')
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const moedas = parseInt(document.getElementById("moedas").value)
+
+            if (moedas >= 100000) {
+                alert("MUITO OBRIGADO PELOS NEGÓCIOS, ESPERO CONTINUARMOS A ENTRAR EM CONTATO!")
+                localStorage.removeItem('wah')
+                window.location.reload()
+            } else {
+                alert("VALOR MUITO BAIXO, SE QUISER SEUS DADOS DE VOLTA PAGUE UM VALOR JUSTO!!")
+            }
+        })
+    }
+
+</script>
 
 </html>

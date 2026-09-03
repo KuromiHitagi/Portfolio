@@ -139,7 +139,7 @@ main {
 
         width: 100%;
         min-height: 700px;
-        
+
         .Titulo {
             font-size: var(--fonte-size-m);
             font-family: var(--fonte-family);
@@ -182,6 +182,7 @@ main {
                 border: var(--border);
                 border-radius: 50%;
                 box-shadow: var(--box-shadow);
+                background-color: #fff;
 
                 img {
                     width: 100%;
@@ -237,7 +238,7 @@ main {
         }
     }
 
-    
+
     .projetos {
         position: relative;
         display: flex;
@@ -438,7 +439,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-       
+
         .Conteudo {
             display: flex;
             align-items: center;
@@ -581,6 +582,18 @@ main {
                         margin-top: 5px;
                         letter-spacing: 2px;
                         height: 37px;
+
+                        .Digite_WAH {
+                            border: none;
+                            border-radius: var(--border-radius);
+                            background-color: var(--cor-fundo);
+                            color: var(--cor-texto-titulo);
+                            width: 50px;
+                            height: 25px;
+                            padding: 0 5px;
+                            margin: 0 15px;
+                            cursor: text !important;
+                        }
                     }
                 }
             }
@@ -596,22 +609,22 @@ footer {
     height: 300px;
 
     background-color: #91482c;
-    
-    .Links{
+
+    .Links {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
 
         width: 33%;
 
-        .card{
+        .card {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
 
-            .background-white{
+            .background-white {
                 position: absolute;
                 top: 25px;
                 left: 25px;
@@ -623,7 +636,7 @@ footer {
                 border-radius: 50%;
             }
 
-            img{
+            img {
                 z-index: 1;
                 width: 140px;
                 height: 140px;
@@ -631,7 +644,7 @@ footer {
                 border-radius: var(--border-radius);
             }
 
-            a{
+            a {
                 margin-top: 15px;
                 cursor: pointer;
                 text-decoration: none;
@@ -641,7 +654,7 @@ footer {
         }
     }
 
-    .copyright{
+    .copyright {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -652,7 +665,7 @@ footer {
         width: 33%;
         text-align: center;
 
-        a{
+        a {
             color: var(--cor-texto-footer);
             font-size: var(--fonte-size-m);
             text-align: center;
@@ -660,14 +673,14 @@ footer {
             cursor: pointer;
         }
 
-        p{
+        p {
             color: var(--cor-texto-footer);
             font-size: var(--fonte-size-s);
         }
     }
 }
 
-.desc{
+.desc {
 
     display: inline-block;
     width: 500px;
@@ -682,31 +695,34 @@ footer {
 
 
 
-.desc > div {
+.desc>div {
 
     position: absolute;
     text-align: center;
     white-space: nowrap;
-    opacity:0;
+    opacity: 0;
     font-weight: 300;
     transform: scale(0);
-    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+    box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
     width: 500px;
     color: #eeeeee;
 
 }
 
-.desc > div:nth-child(1) {
-animation: roll 18s linear infinite 0s;
+.desc>div:nth-child(1) {
+    animation: roll 18s linear infinite 0s;
 }
-.desc > div:nth-child(2) {
-animation: roll 18s linear infinite 4.3s;
+
+.desc>div:nth-child(2) {
+    animation: roll 18s linear infinite 4.3s;
 }
-.desc > div:nth-child(3) {
-animation: roll 18s linear infinite 8.6s;
+
+.desc>div:nth-child(3) {
+    animation: roll 18s linear infinite 8.6s;
 }
-.desc > div:nth-child(4) {
-animation: roll2 18s linear infinite 12.9s;
+
+.desc>div:nth-child(4) {
+    animation: roll2 18s linear infinite 12.9s;
 }
 
 @keyframes roll {
@@ -714,18 +730,22 @@ animation: roll2 18s linear infinite 12.9s;
         opacity: 0;
         transform: scale(0) translateY(-20px);
     }
+
     10% {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+
     25% {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+
     35% {
         opacity: 0;
         transform: scale(0) translateY(20px);
     }
+
     100% {
         opacity: 0;
         transform: scale(0) translateY(20px);
@@ -737,18 +757,22 @@ animation: roll2 18s linear infinite 12.9s;
         opacity: 0;
         transform: scale(0) translateY(-20px);
     }
+
     10% {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+
     25% {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
+
     35% {
         opacity: 0;
         transform: scale(0) translateY(20px);
     }
+
     100% {
         opacity: 0;
         transform: scale(0) translateY(20px);

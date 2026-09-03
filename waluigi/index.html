@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" type="image/png" href="../src/image/persona/favicon-waluigi.png">
+
+    <script>
+        if (localStorage.getItem('wah') === 'true') {
+            // Garante que o body existe antes de mudar o HTML
+            document.addEventListener("DOMContentLoaded", () => {
+                alert("VOCÊ AINDA DEVE PAGAR SEU INÚTIL")
+                alert("NÃO ADIANTA TENTAR FUGIR")
+                bloquearTela();
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -20,7 +31,7 @@
             <ul class="nav-principal_links Grow">
                 <li class="Grow-Text"><a href="#Inicio">Início</a></li>
                 <li class="Grow-Text"><a href="#Projetos">Projetos</a></li>
-                <li class="Grow-Text"><a href="#Contato">Contato</a></li>
+                <li class="Grow-Text"><a href="#Reconhecimento">Reconhecimento</a></li>
             </ul>
         </nav>
     </header>
@@ -29,17 +40,17 @@
         <section id="Inicio" class="hero">
             <div class="Conteudo Grow">
                 <div class="Foto Usuario Grow-Div">
-                    <img src="../src/image/persona/waluigi-formal.jpg" alt="Waluigi">
+                    <img src="../src/image/persona/waluigi/waluigi-formal.jpg" alt="Waluigi">
                 </div>
 
                 <article class="Apresentacao">
                     <div class="title Grow-Text">
                         <h1>Waluigi Wario</h1>
                         <div class="desc">
-                            <div>Founder,</div>
-                            <div>Lead Hacker</div> 
-                            <div>Master cyber-pirate</div> 
-                            <div>CEO WarioWare Inc.</div>
+                            <div>CoFounder. More important than Founder</div>
+                            <div>Lead Social Engineer</div>
+                            <div>Especialista em Infiltração na WarioWare Inc.</div>
+                            <div>CoCEO WarioWare Inc. More important than CEO.</div>
                         </div>
                     </div>
 
@@ -84,7 +95,7 @@
 
         <div class="Separacao"></div>
 
-        <section id="Custo_de_Contrato" class="Custo_de_Contrato">
+        <section class="Custo_de_Contrato">
             <div class="Titulo">
                 <h1>Custo de Contrato</h1>
             </div>
@@ -101,7 +112,7 @@
                     <tbody class="Textos">
                         <tr>
                             <td class="td_meio Grow-Text">Custo Mínimo</td>
-                            <td>80.000 moedas de ouro (desconto de 20% se o alvo for o Luigi). Aceito pagamento em
+                            <td>100.000 moedas de ouro (desconto de 20% se o alvo for o Luigi). Aceito pagamento em
                                 cripto ou
                                 raquetes de ouro.</td>
                         </tr>
@@ -123,7 +134,7 @@
 
         <div class="Separacao"></div>
 
-        <section class="Reconhecimento">
+        <section id="Reconhecimento" class="Reconhecimento">
             <div class="Titulo">
                 <h1>Reconhecimento do Mercado <br> (Ultimatos E Rivais)</h1>
             </div>
@@ -132,7 +143,8 @@
                 <ul>
                     <li>
                         <div class="title Grow-Text"><b> Luigi:</b></div> <br>
-                        <div class="text Grow">Inimigo Mortal / Alvo de Ódio Pessoal (Objetivo de vida: superá-lo, sabotar
+                        <div class="text Grow">Inimigo Mortal / Alvo de Ódio Pessoal (Objetivo de vida: superá-lo,
+                            sabotar
                             suas conquistas e humilhá-lo digitalmente).</div>
                     </li>
                     <li>
@@ -142,12 +154,14 @@
                     </li>
                     <li>
                         <div class="title Grow-Text"><b> Wario:</b></div> <br>
-                        <div class="text Grow">Co-fundador e Parceiro Instável (Sempre tenta ficar com os créditos e com a
+                        <div class="text Grow">Co-fundador e Parceiro Instável (Sempre tenta ficar com os créditos e com
+                            a
                             maior parte do dinheiro e dos lucros da WarioWare).</div>
                     </li>
                     <li>
                         <div class="title Grow-Text"><b> Interpol dos Videogames:</b></div> <br>
-                        <div class="text Grow">Mandado de busca ativo por interceptação ilegal de dados, extorsão virtual e
+                        <div class="text Grow">Mandado de busca ativo por interceptação ilegal de dados, extorsão
+                            virtual e
                             fraudes financeiras no Reino do Cogumelo.</div>
                     </li>
                 </ul>
@@ -158,7 +172,7 @@
 
         <section class="Termos">
             <div class="Titulo">
-                <h1>Termos de Serviço</h1>
+                <h1>Termos</h1>
             </div>
 
             <div class="Conteudo Grow">
@@ -169,7 +183,10 @@
                     </li>
                     <li>
                         <div class="title Grow-Text"><b> Suporte:</b></div>
-                        <div class="text"> Atendimento via chat criptografado. Digite "WAH" para autenticação de dois fatores.</div>
+                        <div class="text"> Atendimento via chat criptografado. Digite
+                            <input type="text" class="Digite_WAH Grow-Text" id="wah_input" placeholder="WAH" onkeyup="wah(event)">
+                            para autenticação de dois fatores.
+                        </div>
                     </li>
                     <li>
                         <div class="title Grow-Text"><b> Isenção de Responsabilidade:</b></div>
@@ -203,6 +220,8 @@
                 <b>Status:</b> IP Mascarado em Servidor Fantasma
             </a>
 
+            <a href="../wario/index.html">Maldito irmão gordo</a>
+
             <p class="Grow-Text">© 2026 Waluigi Wario — Todos os direitos reservados</p>
         </div>
 
@@ -225,5 +244,135 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
+<script>
+    function wah(event) {
+        let input = event.target;
+
+        if (event.key === "Enter") {
+            if (input.value === "WAH" || input.value === "wah") {
+                alert("PARABÉNS, POR TER DIGITADO 'WAH' VOCÊ AGORA SERÁ HACKEADO E TODOS OS SEUS DADOS SERÃO APRISIONADOS");
+                alert("WAH!");
+
+                popUps(2);
+            } else {
+                alert("Seu inútil imprestável que nem sabe digitar uma palavra simples!");
+                alert("TINHA QUE SER O INÚTIL DO WARIO!!");
+
+                popUps(20);
+            }
+        }
+    }
+
+    function popUps(time) {
+        let intervaloPopUp;
+        const body = document.body;
+        let elementosCriados = [];
+
+        const gifs = ["25555992", "2384045729115846243", "3952199103414439118", "15141752", "11722509", "10581868021019503288"];
+
+        intervaloPopUp = setInterval(() => {
+            let gifEscolhido = gifs[Math.floor(Math.random() * gifs.length)];
+
+            // Pega a posição atual da tela e o tamanho da janela visível
+            let larguraJanela = window.innerWidth;
+            let alturaJanela = window.innerHeight;
+            let scrollX = window.scrollX;
+            let scrollY = window.scrollY;
+
+            // Sorteia a posição garantindo que fique na tela visível do usuário
+            let topo = scrollY + Math.floor(Math.random() * (alturaJanela - 220));
+            let esquerda = scrollX + Math.floor(Math.random() * (larguraJanela - 320));
+
+            // 1. Cria uma DIV Wrapper (pai) para blindar a posição contra o script do Tenor
+            let wrapper = document.createElement("div");
+            wrapper.style.position = "absolute";
+            wrapper.style.top = `${topo}px`;
+            wrapper.style.left = `${esquerda}px`;
+            wrapper.style.zIndex = "99999";
+            wrapper.style.pointerEvents = "none"; // Evita interferir nos cliques
+
+            // 2. Cria o container do GIF do Tenor dentro da wrapper
+            let container = document.createElement("div");
+            container.className = "tenor-gif-embed";
+            container.setAttribute("data-postid", gifEscolhido);
+            container.setAttribute("data-share-method", "host");
+            container.setAttribute("data-width", "300px");
+            container.style.border = "1px solid var(--cor-texto-destaque)";
+            container.style.boxShadow = "2px 2px 5px 10px var(--cor-texto-destaque)"
+
+            wrapper.appendChild(container);
+
+            // 3. Cria a tag script do Tenor
+            let scriptTenor = document.createElement("script");
+            scriptTenor.src = "https://tenor.com/embed.js";
+            scriptTenor.type = "text/javascript";
+            scriptTenor.async = true;
+
+            wrapper.appendChild(scriptTenor);
+
+            // Adiciona o wrapper inteiro no body
+            body.appendChild(wrapper);
+
+            // Salva a referência do wrapper principal para remoção limpa depois
+            elementosCriados.push(wrapper);
+
+        }, 300);
+
+        setTimeout(() => {
+            clearInterval(intervaloPopUp);
+
+            // Remove todos os wrappers e seus conteúdos da tela de uma vez
+            elementosCriados.forEach(wrapper => {
+                if (wrapper && wrapper.parentNode) {
+                    wrapper.parentNode.removeChild(wrapper);
+                }
+            });
+
+            alert("WAH! TODOS OS DADOS FORAM ROUBADOS");
+
+            bloquearTela()
+        }, time * 1000);
+    }
+
+    function bloquearTela() {
+        const body = document.body;
+        body.style.backgroundColor = '#fff';
+
+        body.innerHTML = `
+        <form style='z-index: 1; position: absolute; top: 50%; left: 40%;' id='form'>
+            <input style='width: 300px;' id="moedas" type='text' placeholder='Pague com moedas criptografadas: '></input>
+            <button type='submit'>WAH</button>    
+        </form>
+
+        <div>
+            <img src='../src/image/persona/waluigi/background-waluigi1.jpg' width='24%' height='940px'/>
+            <img src='../src/image/persona/waluigi/background-waluigi2.jpg' width='24%' height='940px'/>
+            <img src='../src/image/persona/waluigi/background-waluigi3.jpg' width='51%' height='940px'/>
+        </div>
+    `;
+
+        // Ativa a verificação do envio
+        verify();
+    }
+
+    function verify() {
+        let form = document.getElementById("form")
+        localStorage.setItem('wah', 'true')
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const moedas = parseInt(document.getElementById("moedas").value)
+
+            if (moedas >= 100000) {
+                alert("MUITO OBRIGADO PELOS NEGÓCIOS, ESPERO CONTINUARMOS A ENTRAR EM CONTATO!")
+                localStorage.removeItem('wah')
+                window.location.reload()
+            } else {
+                alert("VALOR MUITO BAIXO, SE QUISER SEUS DADOS DE VOLTA PAGUE UM VALOR JUSTO!!")
+            }
+        })
+    }
+
+</script>
 
 </html>
